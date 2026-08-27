@@ -1,0 +1,134 @@
+.servicesStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.serviceItem {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-normal);
+}
+
+@media (max-width: 640px) {
+  .serviceItem {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.serviceItem:hover {
+  border-color: var(--brand-red);
+  box-shadow: var(--shadow-card);
+}
+
+.itemHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.itemNum {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--brand-red);
+  background-color: var(--brand-red-soft);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.categoryBadge {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-red);
+}
+
+.serviceTitle {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: var(--text-heading);
+  line-height: 1.2;
+}
+
+.itemBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 5rem;
+}
+
+@media (max-width: 768px) {
+  .itemBody {
+    padding-left: 0;
+  }
+}
+
+.serviceDesc {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.deliverablesBox {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.deliverablesHeading {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.deliverablesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .deliverablesList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.dCheck {
+  color: var(--brand-red);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.itemActions {
+  padding-top: 0.5rem;
+}
