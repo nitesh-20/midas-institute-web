@@ -87,8 +87,8 @@ export const CareerRoadmap: React.FC = () => {
           <div className={styles.photoWrapper}>
             <div className={styles.photoFrame}>
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
-                alt="Student presenting and practicing mock interview at Midas Institute Raipur"
+                src="/images/midas/events/midas_tech_seminar_presentation.jpg"
+                alt="Technical industry career seminar and interview training at Midas Institute Raipur"
                 className={styles.interviewPhoto}
               />
               <div className={styles.photoQuoteBox}>

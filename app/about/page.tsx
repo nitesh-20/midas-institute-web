@@ -85,8 +85,8 @@ export default function AboutPage() {
             <div className={styles.storyPhotoCol}>
               <div className={styles.photoFrame}>
                 <img
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
-                  alt="Students and instructors at Midas Institute Raipur"
+                  src="/images/midas/achievements/midas_university_partnership_ceremony.jpg"
+                  alt="Faculty and student leadership at Midas Institute Raipur"
                   className={styles.storyPhoto}
                 />
               </div>

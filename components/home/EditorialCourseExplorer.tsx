@@ -13,49 +13,49 @@ const tracks = [
     label: "Full Stack Web Development",
     categoryKey: "Web & Software",
     courseSlug: "full-stack-web-development",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/training/midas_lab_classroom_session.jpg"
   },
   {
     id: "02",
     label: "Data Science & Artificial Intelligence",
     categoryKey: "Data & AI",
     courseSlug: "data-science-ai",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/training/midas_lab_group_mentorship.jpg"
   },
   {
     id: "03",
     label: "Cyber Security & Ethical Hacking",
     categoryKey: "Cloud & Security",
     courseSlug: "cyber-security-ethical-hacking",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/events/midas_tech_seminar_presentation.jpg"
   },
   {
     id: "04",
     label: "DevOps & Cloud Infrastructure",
     categoryKey: "Cloud & Security",
     courseSlug: "devops-cloud-engineering",
-    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/training/midas_lab_practical_training.jpg"
   },
   {
     id: "05",
     label: "Mobile Application Engineering",
     categoryKey: "Mobile Engineering",
     courseSlug: "mobile-app-development",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/training/midas_lab_group_mentorship.jpg"
   },
   {
     id: "06",
     label: "Financial Basics, Tally & SAP ERP",
     categoryKey: "Finance & ERP",
     courseSlug: "financial-tally-sap",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/infrastructure/midas_library_study_group.jpg"
   },
   {
     id: "07",
     label: "University Management & Degrees",
     categoryKey: "University Degrees",
     courseSlug: "university-degree-programs",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
+    image: "/images/midas/achievements/midas_university_partnership_ceremony.jpg"
   }
 ];
 

@@ -68,8 +68,8 @@ export const HeroSection: React.FC = () => {
               {/* Educational Classroom / Lab Image */}
               <div className={styles.imageWrapper}>
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Students collaborating and coding at Midas Institute of Software Technology Raipur"
+                  src="/images/midas/training/midas_lab_classroom_session.jpg"
+                  alt="Students and faculty in coding lab at Midas Institute of Software Technology Raipur"
                   className={styles.heroImage}
                 />
               </div>

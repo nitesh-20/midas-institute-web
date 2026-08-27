@@ -12,8 +12,8 @@ export const InstituteIntro: React.FC = () => {
           <div className={styles.imageCol}>
             <div className={styles.imageFrame}>
               <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1100&q=80"
-                alt="Technology training and mentorship at Midas Institute of Software Technology Raipur"
+                src="/images/midas/events/midas_orientation_seminar_hall.jpg"
+                alt="Technology student orientation and training at Midas Institute of Software Technology Raipur"
                 className={styles.introImage}
               />
               <div className={styles.accentCorner} />

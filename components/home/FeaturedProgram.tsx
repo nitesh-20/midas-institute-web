@@ -13,8 +13,8 @@ export const FeaturedProgram: React.FC = () => {
             {/* Left: Large High Quality Coding Image */}
             <div className={styles.imageSide}>
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-                alt="Full Stack Web Development student engineering modern applications"
+                src="/images/midas/training/midas_lab_practical_training.jpg"
+                alt="Full Stack Web Development students coding in practical lab at Midas Institute Raipur"
                 className={styles.featureImage}
               />
               <div className={styles.imageOverlayBadge}>
