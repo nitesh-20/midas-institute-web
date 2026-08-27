@@ -1,0 +1,258 @@
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+@media (max-width: 980px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-red);
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-heading);
+}
+
+.redText {
+  color: var(--brand-red);
+}
+
+.para {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.valuesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: 0.5rem;
+}
+
+.valueRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.valCheck {
+  color: var(--brand-red);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.valTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.25;
+}
+
+.valDesc {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  margin-top: 0.2rem;
+}
+
+.storyPhotoCol {
+  position: relative;
+}
+
+.photoFrame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  height: 480px;
+}
+
+@media (max-width: 640px) {
+  .photoFrame {
+    height: 320px;
+  }
+}
+
+.storyPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Partners Section */
+.partnersSection {
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.partnerTop {
+  max-width: 780px;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.partnerSub {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.partnerCard {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all var(--transition-normal);
+}
+
+.partnerCard:hover {
+  border-color: var(--brand-red);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.partnerIconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-red-soft);
+  color: var(--brand-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnerName {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.3;
+}
+
+.partnerBadge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #059669;
+  background-color: #ecfdf5;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  align-self: flex-start;
+}
+
+.partnerDesc {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.partnerLoc {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+/* CSR Banner */
+.csrBanner {
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .csrBanner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.csrContent {
+  max-width: 840px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.csrTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--brand-red);
+}
+
+.csrTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--text-heading);
+}
+
+.csrText {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.csrBullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.csrActions {
+  margin-top: 0.5rem;
+}
