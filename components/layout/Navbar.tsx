@@ -7,16 +7,13 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  Phone, 
-  MessageCircle, 
   ArrowRight,
-  GraduationCap,
-  Sparkles,
-  MapPin
+  Phone,
+  MessageCircle,
+  Sparkles
 } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { coursesData } from "@/data/coursesData";
-import { Button } from "@/components/common/Button";
 import styles from "./Navbar.module.css";
 
 export const Navbar: React.FC = () => {
@@ -27,7 +24,7 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 15);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -39,31 +36,33 @@ export const Navbar: React.FC = () => {
   }, [pathname]);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Courses", href: "/courses", isDropdown: true },
-    { name: "Career Coaching", href: "/courses/communication-soft-skills" },
+    { name: "Career Prep", href: "/courses/communication-soft-skills" },
     { name: "Services", href: "/services" },
-    { name: "University Degrees", href: "/courses/university-degree-programs" },
-    { name: "Internship & CSR", href: "/internship" },
+    { name: "Degrees", href: "/courses/university-degree-programs" },
+    { name: "Internship", href: "/internship" },
     { name: "Contact", href: "/contact" }
   ];
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      {/* Main Navbar */}
-      <nav className={`container ${styles.navbar}`}>
-        {/* Brand Logo with Midas Red Emblem */}
+    <header className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ""}`}>
+      {/* Floating Island / Pill Navbar */}
+      <nav className={styles.floatingNav} aria-label="Main Navigation">
+        {/* Brand Logo (Left) */}
         <Link href="/" className={styles.brand}>
           <div className={styles.emblem}>
-            <span className={styles.emblemText}>MIST</span>
+            <span className={styles.emblemText}>M</span>
           </div>
-          <div className={styles.brandText}>
-            <span className={styles.brandTitle}>MIDAS INSTITUTE</span>
-            <span className={styles.brandSubtitle}>SOFTWARE & TECHNOLOGY • RAIPUR</span>
+          <div className={styles.brandTitleWrap}>
+            <span className={styles.brandTitle}>midas</span>
+            <span className={styles.brandDot}>.</span>
+            <span className={styles.brandTag}>INSTITUTE</span>
           </div>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Center Navigation Links with Soft Pill Hover */}
         <div className={styles.desktopNav}>
           {navLinks.map((link) => {
             if (link.isDropdown) {
@@ -82,14 +81,14 @@ export const Navbar: React.FC = () => {
                   >
                     <span>{link.name}</span>
                     <ChevronDown
-                      size={14}
+                      size={13}
                       className={`${styles.chevron} ${
                         coursesDropdownOpen ? styles.rotateChevron : ""
                       }`}
                     />
                   </Link>
 
-                  {/* Clean Academic Mega Menu */}
+                  {/* Clean Mega Dropdown Menu */}
                   {coursesDropdownOpen && (
                     <div className={styles.megaMenu}>
                       <div className={styles.megaMenuTop}>
@@ -117,7 +116,7 @@ export const Navbar: React.FC = () => {
 
                       <div className={styles.megaMenuFooter}>
                         <span className={styles.authTag}>
-                          🎓 Authorised Training Partner for University Degree Programs (MBA / BBA / B.Com)
+                          🎓 Authorised University Partner (MBA / BBA / B.Com)
                         </span>
                         <Link href="/courses/university-degree-programs" className={styles.degreeBtn}>
                           Explore Degrees →
@@ -143,18 +142,22 @@ export const Navbar: React.FC = () => {
           })}
         </div>
 
-        {/* Primary CTA */}
+        {/* Right Action Buttons (Get full access / Join us style) */}
         <div className={styles.navActions}>
-          <Button
-            href="/contact"
-            variant="primary"
-            size="sm"
-            rightIcon={<ArrowRight size={14} />}
-          >
+          <Link href="/contact" className={styles.primaryCta}>
             Enquire Now
-          </Button>
+          </Link>
 
-          {/* Mobile Toggle */}
+          <a
+            href={siteConfig.contact.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondaryCta}
+          >
+            WhatsApp
+          </a>
+
+          {/* Mobile Menu Toggle */}
           <button
             type="button"
             className={styles.mobileToggle}
@@ -162,12 +165,12 @@ export const Navbar: React.FC = () => {
             aria-label="Toggle Menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Dropdown Drawer */}
       {mobileMenuOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.mobileLinks}>
@@ -186,21 +189,16 @@ export const Navbar: React.FC = () => {
 
           <div className={styles.mobileDivider} />
 
-          <div className={styles.mobileContactBox}>
-            <p className={styles.mobileContactHeading}>ADMISSIONS HELPLINE</p>
-            <a href={`tel:${siteConfig.contact.primaryPhone}`} className={styles.mobilePhone}>
-              {siteConfig.contact.primaryPhoneDisplay}
-            </a>
-            <Button
-              href={siteConfig.contact.whatsappUrl}
-              variant="primary"
-              size="md"
-              fullWidth
-              external
-              leftIcon={<MessageCircle size={16} />}
+          <div className={styles.mobileActions}>
+            <Link href="/contact" className={styles.mobilePrimaryBtn}>
+              Enquire Now
+            </Link>
+            <a
+              href={`tel:${siteConfig.contact.primaryPhone}`}
+              className={styles.mobileSecondaryBtn}
             >
-              WhatsApp Admissions
-            </Button>
+              Call {siteConfig.contact.primaryPhoneDisplay}
+            </a>
           </div>
         </div>
       )}
