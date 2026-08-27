@@ -1,0 +1,184 @@
+.section {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.topContent {
+  max-width: 820px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  margin-bottom: 0.75rem;
+}
+
+.eyebrowLine {
+  width: 20px;
+  height: 2px;
+  background-color: var(--brand-red);
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.redText {
+  color: var(--brand-red);
+}
+
+.leadText {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* Editorial Grid */
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+@media (max-width: 980px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Left: Sequence List */
+.sequenceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepRow {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.stepMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepNum {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--brand-red-soft);
+  color: var(--brand-red);
+  border: 2px solid var(--brand-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.stepLine {
+  width: 2px;
+  flex: 1;
+  background-color: var(--border-light);
+  margin: 4px 0;
+  min-height: 40px;
+}
+
+.stepContent {
+  padding-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stepLabel {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+}
+
+.stepDesc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+.sequenceFooter {
+  padding-top: 0.5rem;
+}
+
+/* Right: Photo Frame */
+.photoWrapper {
+  position: relative;
+}
+
+.photoFrame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+}
+
+.interviewPhoto {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .interviewPhoto {
+    height: 320px;
+  }
+}
+
+.photoQuoteBox {
+  padding: 1.75rem;
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quoteText {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-heading);
+  line-height: 1.6;
+}
+
+.quoteAuthor {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--brand-red);
+}
