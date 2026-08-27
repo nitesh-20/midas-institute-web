@@ -1,0 +1,40 @@
+User-agent: dotbot
+Disallow: /
+
+User-agent: AhrefsBot 
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: CuteStat
+Disallow: /
+
+User-agent: AlphaSeoBot
+Disallow: /
+
+User-agent: AlphaSeoBot-SA
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+
+
+User-agent: *
+Disallow: /unavailable
+Disallow: /?scrollTo=*
+Disallow: /login
+Disallow: /my-account
+Disallow: /*?page=order-summary&purpose=cart
+Disallow: /cart
+
+Sitemap: https://www.midastechnologies.in/website.xml
+Sitemap: https://www.midastechnologies.in/product_0.xml
+Sitemap: https://www.midastechnologies.in/sitemap.xml
