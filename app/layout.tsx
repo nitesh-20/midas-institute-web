@@ -42,6 +42,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.midastechnologies.in",
   },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "MIDAS Institute of Software Technology | Raipur",
     description: "Launch your tech career with 11+ years of proven software & data science training in Raipur. Live projects, HR prep & university degrees.",
@@ -51,18 +55,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://image1.jdomni.in/storeLogo/04102025/B8/F7/C2/990F2C72FD031160DF3133F3DC_1759571233913.png",
-        width: 1200,
-        height: 630,
-        alt: "MIDAS Institute of Software Technology Logo",
+        url: "/images/logo.png",
+        width: 600,
+        height: 600,
+        alt: "MIDAS Institute of Software Technology (MIST) Logo",
       }
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "MIDAS Institute of Software Technology | Raipur",
     description: "Premier Software, Data Science & IT Training Institute in Raipur. 11+ Years of Technical Excellence.",
-    images: ["https://image1.jdomni.in/storeLogo/04102025/B8/F7/C2/990F2C72FD031160DF3133F3DC_1759571233913.png"],
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,

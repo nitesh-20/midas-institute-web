@@ -46,49 +46,35 @@
   flex-shrink: 0;
 }
 
-.emblem {
-  width: 32px;
-  height: 32px;
+.brandLogoImg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   border-radius: 50%;
-  background-color: var(--brand-red);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 8px rgba(217, 4, 41, 0.3);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .brandTitleWrap {
   display: flex;
-  align-items: baseline;
-  gap: 0.15rem;
+  flex-direction: column;
+  line-height: 1;
 }
 
 .brandTitle {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 900;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--text-heading);
-  line-height: 1;
-}
-
-.brandDot {
-  color: var(--brand-red);
-  font-weight: 900;
-  font-size: 1.25rem;
 }
 
 .brandTag {
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--text-muted);
+  color: var(--brand-red);
   text-transform: uppercase;
-  margin-left: 0.15rem;
 }
 
 /* Center Desktop Navigation Links with Soft Pill Hover */

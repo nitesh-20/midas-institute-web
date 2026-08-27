@@ -29,7 +29,7 @@ export const SchemaJsonLd: React.FC<SchemaJsonLdProps> = ({
       name: siteConfig.fullName,
       alternateName: [siteConfig.shortName, "MIDAS Institute", "MIST Computer Education"],
       url: siteConfig.websiteUrl,
-      logo: "https://image1.jdomni.in/storeLogo/04102025/B8/F7/C2/990F2C72FD031160DF3133F3DC_1759571233913.png",
+      logo: "https://www.midastechnologies.in/images/logo.png",
       description: siteConfig.description,
       address: {
         "@type": "PostalAddress",

@@ -52,12 +52,13 @@ export const Navbar: React.FC = () => {
       <nav className={styles.floatingNav} aria-label="Main Navigation">
         {/* Brand Logo (Left) */}
         <Link href="/" className={styles.brand}>
-          <div className={styles.emblem}>
-            <span className={styles.emblemText}>M</span>
-          </div>
+          <img
+            src="/images/logo.png"
+            alt="MIST Computer Education Logo"
+            className={styles.brandLogoImg}
+          />
           <div className={styles.brandTitleWrap}>
-            <span className={styles.brandTitle}>midas</span>
-            <span className={styles.brandDot}>.</span>
+            <span className={styles.brandTitle}>MIDAS</span>
             <span className={styles.brandTag}>INSTITUTE</span>
           </div>
         </Link>

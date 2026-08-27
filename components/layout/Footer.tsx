@@ -47,12 +47,14 @@ export const Footer: React.FC = () => {
           {/* Col 1: Institute Overview & Contact */}
           <div className={styles.colInstitute}>
             <Link href="/" className={styles.brand}>
-              <div className={styles.emblem}>
-                <span>MIST</span>
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="MIST Computer Education Logo"
+                className={styles.brandLogoImg}
+              />
               <div className={styles.brandText}>
                 <span className={styles.brandTitle}>MIDAS INSTITUTE</span>
-                <span className={styles.brandSub}>SOFTWARE & TECHNOLOGY</span>
+                <span className={styles.brandSub}>SOFTWARE & TECHNOLOGY • RAIPUR</span>
               </div>
             </Link>
 
