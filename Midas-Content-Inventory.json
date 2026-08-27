@@ -1,0 +1,399 @@
+{
+  "institute": {
+    "officialName": "MIDAS INSTITUTE OF SOFTWARE TECHNOLOGY",
+    "shortName": "MIST",
+    "brandNames": [
+      "MIDAS Institute of Software Technology",
+      "MIST Computer Education",
+      "MIST Academy"
+    ],
+    "establishedExperience": "11+ years of expertise",
+    "positioning": "Premier IT, Software Engineering & Data Science Training Institute in Raipur",
+    "taglines": {
+      "brochure": "START TOUR CARRER BEFORE THE COURSE ENDS...",
+      "website": [
+        "Explore the Best",
+        "Get Ready for Your Dream Job!",
+        "A choice that makes a significant impact on your career.",
+        "Bridging Theory with Practice through Internship Programs"
+      ],
+      "recommendedPolished": "Launch Your Tech Career Before You Graduate."
+    },
+    "location": {
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "country": "India",
+      "pinCode": "492001",
+      "primaryAddress": "2nd Floor, SDS Chamber, Above HDFC Bank, Near Agrasen Chowk, Raipur, Chhattisgarh - 492001",
+      "alternateAddressMentions": [
+        "SDS Chamber 2nd Floor Bhaisthan Near Agrasen Chowk Raipur. 492001",
+        "Tatyapara, Raipur-chhattisgarh"
+      ]
+    },
+    "contact": {
+      "phones": [
+        "+91-6266846474",
+        "+91-8103168797",
+        "+91-7000882359"
+      ],
+      "primaryPhone": "+916266846474",
+      "admissionsPhone": "+918103168797",
+      "supportPhone": "+917000882359",
+      "email": "mistraipur170@gmail.com",
+      "websiteUrl": "https://www.midastechnologies.in",
+      "whatsappUrl": "https://api.whatsapp.com/send?phone=916266846474",
+      "socialProfiles": {
+        "facebook": "https://www.facebook.com/mistacademy/",
+        "justdial": "http://www.justdial.com/dt-99FFK5UHFQL",
+        "instagram": "[CONTENT REQUIRED FROM INSTITUTE]",
+        "linkedin": "[CONTENT REQUIRED FROM INSTITUTE]",
+        "youtube": "[CONTENT REQUIRED FROM INSTITUTE]"
+      },
+      "businessHours": "[CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    "affiliationsAndPartners": {
+      "authorisedUniversityPartners": [
+        {
+          "name": "Kalinga University",
+          "source": "Brochure Badge"
+        },
+        {
+          "name": "ISBM University",
+          "source": "Brochure Badge"
+        },
+        {
+          "name": "MATS University",
+          "source": "Brochure Badge"
+        },
+        {
+          "name": "Anjaneya University",
+          "source": "Brochure Badge"
+        },
+        {
+          "name": "Dr. C.V. Raman University (CVRU)",
+          "source": "Brochure Badge Seal"
+        }
+      ],
+      "csrAndScholarshipPartners": [
+        {
+          "name": "Akida Welfare Foundation",
+          "purpose": "Scholarships for financially challenged students"
+        },
+        {
+          "name": "SSV Group",
+          "purpose": "Financial backing covering up to 50% college fees"
+        }
+      ]
+    }
+  },
+  "courses": [
+    {
+      "id": "data-science",
+      "name": "Data Science & Artificial Intelligence",
+      "category": "Data & AI",
+      "sources": ["Brochure", "Website"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Comprehensive program covering data manipulation, statistical analysis, machine learning algorithms, deep learning, and AI model deployment.",
+      "curriculumModules": [
+        "Advance Excel / Master Excel",
+        "Python Programming Core & Advanced",
+        "Python Libraries: Pandas, NumPy with Statistics, Matplotlib, Seaborn",
+        "Data Structures & Algorithms (DSA)",
+        "Relational Databases: SQL / MySQL",
+        "Business Intelligence & Dashboarding: Power BI",
+        "Data Visualization Analysis & Reporting",
+        "Machine Learning (ML) & Artificial Intelligence (AI)",
+        "Neural Networks & Deep Learning",
+        "Big Data & Cloud Foundations (AWS, Azure, GCP)",
+        "Version Control: Git & GitHub"
+      ],
+      "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Power BI", "SQL", "MySQL", "Git", "GitHub", "AWS", "Azure", "GCP"],
+      "careerOutcomes": ["Data Scientist", "Machine Learning Engineer", "AI Associate", "Data Analyst"],
+      "eligibility": "Graduates, IT/Non-IT Students, Working Professionals [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data Analytics & Business Intelligence",
+      "category": "Data & AI",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Focused curriculum on business reporting, analytical dashboards, SQL querying, and Python statistical libraries.",
+      "curriculumModules": [
+        "Advanced Excel / Master Excel",
+        "Python for Analytics",
+        "Pandas, NumPy, Matplotlib, Seaborn",
+        "Power BI Business Intelligence",
+        "SQL Querying & Database Extraction",
+        "Git & GitHub Version Control"
+      ],
+      "technologies": ["Excel", "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Power BI", "SQL", "Git", "GitHub"],
+      "careerOutcomes": ["Data Analyst", "BI Developer", "MIS Executive", "Business Analyst"],
+      "eligibility": "Open to all graduates and undergraduates [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "full-stack-web-development",
+      "name": "Full Stack Web Development",
+      "category": "Software & Web Development",
+      "sources": ["Brochure", "Website"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "End-to-end full stack software development mastering front-end, back-end API architecture, and database management.",
+      "curriculumModules": [
+        "Front-End: HTML5, CSS3, Modern Responsive Layouts",
+        "Styling Frameworks: Bootstrap / Tailwind CSS",
+        "JavaScript (ES6+) Core & DOM Manipulation",
+        "Front-End Frameworks: React.js, Next.js",
+        "Version Control: Git & GitHub",
+        "Back-End Tracks (Choice of):",
+        "  - Option 1: Node.js & Express.js (MERN / MEAN)",
+        "  - Option 2: Python & Django",
+        "  - Option 3: Java & Spring Boot",
+        "RESTful API Development & Architecture",
+        "Databases: MySQL & MongoDB"
+      ],
+      "technologies": ["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js", "Next.js", "Node.js", "Express.js", "Django", "Java", "Spring Boot", "REST APIs", "MySQL", "MongoDB", "Git", "GitHub"],
+      "careerOutcomes": ["Full Stack Developer", "Front-End Developer", "Back-End Developer", "Software Engineer"],
+      "eligibility": "B.Tech, BCA, MCA, B.Sc IT or enthusiastic beginners [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "android-native-development",
+      "name": "Android Native App Development",
+      "category": "Mobile App Development",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Native Android app engineering using Android Studio, Java/Kotlin, and RESTful back-end integration.",
+      "curriculumModules": [
+        "IDE: Android Studio",
+        "Front-end UI: XML layouts, screens, material design",
+        "Languages: Java or Kotlin",
+        "Back-end: PHP / Node.js APIs",
+        "REST APIs to connect mobile app with server",
+        "Database: MySQL / MongoDB"
+      ],
+      "technologies": ["Android Studio", "Java", "Kotlin", "XML", "PHP", "Node.js", "REST APIs", "MySQL", "MongoDB"],
+      "careerOutcomes": ["Android Developer", "Native Mobile Engineer"],
+      "eligibility": "Basic programming background recommended [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "ios-native-development",
+      "name": "iOS Native App Development",
+      "category": "Mobile App Development",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Native Apple iOS application development using Xcode, Swift, UIKit, and SwiftUI.",
+      "curriculumModules": [
+        "IDE: Xcode",
+        "Language: Swift",
+        "UI Frameworks: UIKit, SwiftUI",
+        "Back-end: PHP / Node.js APIs",
+        "REST APIs & Server Integration",
+        "Database: MySQL / MongoDB"
+      ],
+      "technologies": ["Xcode", "Swift", "UIKit", "SwiftUI", "Node.js", "PHP", "REST APIs", "MySQL", "MongoDB"],
+      "careerOutcomes": ["iOS Developer", "Apple App Specialist"],
+      "eligibility": "Basic programming background recommended [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "flutter-cross-platform",
+      "name": "Flutter Cross-Platform App Development",
+      "category": "Mobile App Development",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Build multi-platform applications for iOS and Android from a single Dart codebase.",
+      "curriculumModules": [
+        "Language: Dart",
+        "UI: Flutter Widget Hierarchy & State Management",
+        "Back-end: PHP / Node.js",
+        "REST APIs Integration",
+        "Database: MySQL / MongoDB"
+      ],
+      "technologies": ["Flutter", "Dart", "Node.js", "PHP", "REST APIs", "MySQL", "MongoDB"],
+      "careerOutcomes": ["Flutter Developer", "Cross-Platform App Engineer"],
+      "eligibility": "Open to all students and developers [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "react-native-cross-platform",
+      "name": "React Native App Development",
+      "category": "Mobile App Development",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Cross-platform mobile application development leveraging React and JavaScript.",
+      "curriculumModules": [
+        "Language: JavaScript",
+        "UI: Flexbox, Native Components, Navigation",
+        "Back-end: PHP / Node.js APIs",
+        "REST APIs & Mobile State Architecture",
+        "Database: MySQL / MongoDB"
+      ],
+      "technologies": ["React Native", "JavaScript", "Flexbox", "Node.js", "REST APIs", "MySQL", "MongoDB"],
+      "careerOutcomes": ["React Native Developer", "Mobile Application Engineer"],
+      "eligibility": "Basic JavaScript knowledge helpful [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "devops-engineering",
+      "name": "DevOps & Cloud Infrastructure Engineering",
+      "category": "Cloud & Infrastructure",
+      "sources": ["Brochure", "Website"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Master Linux server administration, continuous integration/continuous deployment (CI/CD), containerization, and infrastructure as code.",
+      "curriculumModules": [
+        "Linux Fundamentals & Linux Server Administration",
+        "Networking: DNS, Web Server, NAS, Firewalls",
+        "Version Control: Git & GitHub",
+        "Infrastructure as Code: Terraform & Ansible",
+        "Containerization: Docker & Container Orchestration: Kubernetes",
+        "Build & CI/CD Tools: Maven, Jenkins",
+        "DevOps Principles & Cloud Automation"
+      ],
+      "technologies": ["Linux", "Ansible", "Terraform", "Docker", "Kubernetes", "Maven", "Jenkins", "Git", "GitHub"],
+      "careerOutcomes": ["DevOps Engineer", "Cloud Engineer", "System Administrator", "SRE"],
+      "eligibility": "IT Students, System Admins, Developers [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "cyber-security",
+      "name": "Cyber Security",
+      "category": "Cyber Security",
+      "sources": ["Brochure", "Website"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Defensive security training covering network protection, firewalls, threat detection, and vulnerability mitigation.",
+      "curriculumModules": [
+        "CCNA Routing & Switching Basics",
+        "Network Security Protocols",
+        "Firewall Technology & Configuration",
+        "Hacking & Penetration Testing (Defensive)",
+        "Server For Hackers",
+        "Kali Linux (Kali Everything Edition)"
+      ],
+      "technologies": ["CCNA", "Firewalls", "Kali Linux", "Network Analyzers", "Security Protocols"],
+      "careerOutcomes": ["Cyber Security Analyst", "SOC Analyst", "Network Administrator"],
+      "eligibility": "Basic computer networking knowledge [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "ethical-hacking",
+      "name": "Ethical Hacking & Penetration Testing",
+      "category": "Cyber Security",
+      "sources": ["Brochure"],
+      "duration": "3–6 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Comprehensive offensive and defensive security program with penetration testing drills and malware analysis.",
+      "curriculumModules": [
+        "CCNA Networking Foundations",
+        "Network Security & Perimeter Defense",
+        "Firewall Technology",
+        "Python for Hackers & Malware Development",
+        "Offensive Hacking & Penetration Testing",
+        "Server for Hackers",
+        "Kali Linux (Kali Everything Edition)",
+        "Social Engineering (Defensive + Offensive)"
+      ],
+      "technologies": ["Kali Linux", "Python", "CCNA", "Metasploit", "Nmap", "Wireshark", "Burp Suite"],
+      "careerOutcomes": ["Ethical Hacker", "Penetration Tester", "Vulnerability Analyst"],
+      "eligibility": "Enthusiasts, IT graduates [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "financial-tally-sap",
+      "name": "Financial Basics, Tally Prime & SAP",
+      "category": "Finance & ERP",
+      "sources": ["Brochure", "Website"],
+      "duration": "2–4 months [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Hands-on corporate accounting, GST billing, MIS reporting, and SAP ERP modules.",
+      "curriculumModules": [
+        "Tally Prime with GST (Accounting, Vouchers, GST Filing)",
+        "Advanced Excel & Financial Modeling",
+        "SAP ERP Functional Modules (e.g. SAP FI)",
+        "SAP ERP Technical Modules"
+      ],
+      "technologies": ["Tally Prime", "GST Portal", "SAP ERP", "Advanced Excel"],
+      "careerOutcomes": ["Accountant", "Tax Consultant", "SAP Associate", "MIS Executive"],
+      "eligibility": "Commerce, Management & Non-technical graduates [CONTENT REQUIRED FROM INSTITUTE]"
+    },
+    {
+      "id": "communication-soft-skills",
+      "name": "Communication & Soft Skills (HR Round Preparation)",
+      "category": "Career Enablement",
+      "sources": ["Brochure"],
+      "duration": "Integrated across all courses / Standalone workshop",
+      "overview": "Rigorous corporate readiness training focused on interview clearing, business communication, and executive presence.",
+      "curriculumModules": [
+        "Resume Writing & ATS Formatting",
+        "Telephonic Conversation Skills",
+        "Creating Presentations & Presenting Skills",
+        "Report & Business Email Writing",
+        "Body Language & Professional Attire",
+        "Grammar & Vocabulary Enhancement",
+        "About Yourself Introductions & Elevator Pitches",
+        "Interview Types & Multi-Round Preparation",
+        "Group Discussions (GD) Drills",
+        "Personal Interview (PI) Drills & Comprehensive Mock Interviews"
+      ],
+      "technologies": ["Interview Simulator", "Resume Builders", "Presentation Tools"],
+      "careerOutcomes": ["Corporate Ready Professional", "Effective Communicator"],
+      "eligibility": "All enrolled students and job seekers"
+    },
+    {
+      "id": "university-management-programs",
+      "name": "University Affiliated Degrees & Management Certificates",
+      "category": "University Programs",
+      "sources": ["Brochure Page 2"],
+      "duration": "1 Year to 3 Years [CONTENT REQUIRED FROM INSTITUTE]",
+      "overview": "Recognized higher education degree and certification pathways delivered via authorised university partners.",
+      "curriculumModules": [
+        "Certificate in Hotel Management (C.H.M.)",
+        "Certificate in Travel and Tourism Management",
+        "Certified Financial Advisor (C.F.A.)",
+        "Certificate Course in Digital Marketing (C.D.M.)",
+        "Certificate in Hospital Administration (C.H.A.)",
+        "Certificate Course in Sales and Marketing (C.S.M.)",
+        "Bachelor Program in Business Administration (BPBA)",
+        "Bachelor Program in Commerce (B.Com)",
+        "Masters in Business Administration (MBA)",
+        "Executive Masters in Business Administration (EMBA)"
+      ],
+      "technologies": ["Management Case Studies", "Digital Marketing Tools", "ERP"],
+      "careerOutcomes": ["Business Manager", "Digital Marketing Lead", "Hospitality Executive", "Financial Advisor"],
+      "eligibility": "10+2 / Graduation as per university criteria [CONTENT REQUIRED FROM INSTITUTE]"
+    }
+  ],
+  "services": [
+    {
+      "name": "Technical & Skill Based Training",
+      "description": "Instructor-led offline and online training across cutting-edge IT stacks."
+    },
+    {
+      "name": "Summer & Industrial Internship",
+      "description": "Real-world project experience bridging theoretical education with IT industry standards."
+    },
+    {
+      "name": "Corporate & HR Round Preparation",
+      "description": "End-to-end placement readiness including resume crafting, GDs, and mock interviews."
+    },
+    {
+      "name": "Website & Mobile Application Development",
+      "description": "Full-cycle digital product engineering for enterprises and startups."
+    },
+    {
+      "name": "Social Media & Digital Marketing",
+      "description": "Brand visibility, SEO, and social media campaigns."
+    },
+    {
+      "name": "Scholarship Programs",
+      "description": "Fee assistance up to 50% with Akida Welfare Foundation & SSV Group."
+    }
+  ],
+  "verifiedAssets": {
+    "primaryLogo": "https://image1.jdomni.in/storeLogo/04102025/B8/F7/C2/990F2C72FD031160DF3133F3DC_1759571233913.png",
+    "brochureFile": "midas final broucher design A4 Front Back.pdf",
+    "partnerLogos": [
+      "Kalinga University",
+      "ISBM University",
+      "MATS University",
+      "Anjaneya University",
+      "Dr. C.V. Raman University"
+    ]
+  },
+  "contentRequiredFromInstitute": [
+    "Exact batch start dates and current fee schedules",
+    "Individual instructor / faculty member bios and photos",
+    "Formal student testimonials with full names and verifiable placement companies",
+    "Exact accreditation documentation for university partner badges",
+    "Google Business profile CID and official Google Maps embed link"
+  ]
+}
