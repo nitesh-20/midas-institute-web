@@ -1,0 +1,241 @@
+.sectionTop {
+  max-width: 800px;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-red);
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-heading);
+}
+
+.redText {
+  color: var(--brand-red);
+}
+
+.sub {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.tracksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.trackCard {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.trackCard:hover {
+  border-color: var(--brand-red);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.trackTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trackIcon {
+  color: var(--brand-red);
+}
+
+.trackNum {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--brand-red);
+  background-color: var(--brand-red-soft);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+}
+
+.trackTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.3;
+}
+
+.trackStack {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand-red);
+  background-color: var(--bg-surface-alt);
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+}
+
+.trackDesc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.trackFooter {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.certBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+/* CSR Section */
+.csrSection {
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.csrGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .csrGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.csrTextCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.csrTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--brand-red);
+}
+
+.para {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.para strong {
+  color: var(--text-heading);
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.bRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.bCheck {
+  color: var(--brand-red);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.csrActions {
+  margin-top: 0.5rem;
+}
+
+/* Info Box */
+.scholarshipInfoBox {
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoTitle {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-heading);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.92rem;
+}
+
+.infoLabel {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.infoVal {
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: right;
+}
+
+.infoValHighlight {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: var(--brand-red);
+  font-size: 1.05rem;
+  text-align: right;
+}
