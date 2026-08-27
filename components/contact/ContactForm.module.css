@@ -1,0 +1,163 @@
+.form {
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.formTitle {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--text-heading);
+  line-height: 1.25;
+}
+
+.formSubtitle {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--text-heading);
+}
+
+.required {
+  color: var(--brand-red);
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-heading);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--brand-red);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px var(--brand-red-soft);
+}
+
+.submitRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.whatsappDirectBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #059669;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.whatsappDirectBtn:hover {
+  background-color: #d1fae5;
+}
+
+/* Success Box */
+.successBox {
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.successIcon {
+  color: #059669;
+}
+
+.successTitle {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-heading);
+}
+
+.successText {
+  font-size: 1.025rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+.successText strong {
+  color: var(--text-heading);
+}
+
+.successActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 0.5rem;
+}
+
+.newInquiryBtn {
+  background: none;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.newInquiryBtn:hover {
+  color: var(--brand-red);
+}
