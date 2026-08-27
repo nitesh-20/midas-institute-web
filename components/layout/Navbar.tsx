@@ -8,9 +8,14 @@ import {
   X, 
   ChevronDown, 
   ArrowRight,
-  Phone,
   MessageCircle,
-  Sparkles
+  BookOpen,
+  Briefcase,
+  GraduationCap,
+  Sparkles,
+  Building2,
+  Award,
+  HeartHandshake
 } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { coursesData } from "@/data/coursesData";
@@ -20,11 +25,20 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
+  
+  // Dropdown hover/click states
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  
+  // Mobile accordion state
+  const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>({
+    about: false,
+    courses: false,
+    career: false
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 15);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -32,24 +46,19 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setCoursesDropdownOpen(false);
+    setActiveDropdown(null);
   }, [pathname]);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Courses", href: "/courses", isDropdown: true },
-    { name: "Career Prep", href: "/courses/communication-soft-skills" },
-    { name: "Services", href: "/services" },
-    { name: "Degrees", href: "/courses/university-degree-programs" },
-    { name: "Internship", href: "/internship" },
-    { name: "Contact", href: "/contact" }
-  ];
+  const toggleMobileSubmenu = (key: string) => {
+    setMobileExpanded((prev) => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
 
   return (
-    <header className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ""}`}>
-      {/* Floating Island / Pill Navbar */}
-      <nav className={styles.floatingNav} aria-label="Main Navigation">
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+      <div className={`container ${styles.navContainer}`}>
         {/* Brand Logo (Left) */}
         <Link href="/" className={styles.brand}>
           <img
@@ -57,93 +66,259 @@ export const Navbar: React.FC = () => {
             alt="MIST Computer Education Logo"
             className={styles.brandLogoImg}
           />
-          <div className={styles.brandTitleWrap}>
-            <span className={styles.brandTitle}>MIDAS</span>
-            <span className={styles.brandTag}>INSTITUTE</span>
+          <div className={styles.brandText}>
+            <span className={styles.brandTitle}>MIDAS INSTITUTE</span>
+            <span className={styles.brandSubtitle}>OF SOFTWARE TECHNOLOGY</span>
           </div>
         </Link>
 
-        {/* Center Navigation Links with Soft Pill Hover */}
-        <div className={styles.desktopNav}>
-          {navLinks.map((link) => {
-            if (link.isDropdown) {
-              return (
-                <div
-                  key={link.name}
-                  className={styles.dropdownWrapper}
-                  onMouseEnter={() => setCoursesDropdownOpen(true)}
-                  onMouseLeave={() => setCoursesDropdownOpen(false)}
-                >
-                  <Link
-                    href={link.href}
-                    className={`${styles.navLink} ${
-                      pathname.startsWith("/courses") ? styles.activeLink : ""
-                    }`}
-                  >
-                    <span>{link.name}</span>
-                    <ChevronDown
-                      size={13}
-                      className={`${styles.chevron} ${
-                        coursesDropdownOpen ? styles.rotateChevron : ""
-                      }`}
-                    />
+        {/* Center Desktop Navigation (Clean & Uncrowded) */}
+        <nav className={styles.desktopNav} aria-label="Main Navigation">
+          {/* 1. Home */}
+          <Link
+            href="/"
+            className={`${styles.navItem} ${pathname === "/" ? styles.activeItem : ""}`}
+          >
+            Home
+          </Link>
+
+          {/* 2. About ▾ */}
+          <div
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => setActiveDropdown("about")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <Link
+              href="/about"
+              className={`${styles.navItem} ${
+                pathname === "/about" ? styles.activeItem : ""
+              }`}
+            >
+              <span>About</span>
+              <ChevronDown
+                size={14}
+                className={`${styles.chevron} ${
+                  activeDropdown === "about" ? styles.rotateChevron : ""
+                }`}
+              />
+            </Link>
+
+            {activeDropdown === "about" && (
+              <div className={`${styles.dropdownMenu} ${styles.aboutDropdown}`}>
+                <Link href="/about" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <Building2 size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>About Midas</p>
+                    <p className={styles.linkSub}>11+ years heritage & academic mission in Raipur</p>
+                  </div>
+                </Link>
+
+                <Link href="/about" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <Sparkles size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>Our Approach</p>
+                    <p className={styles.linkSub}>Live project labs & mentor-driven learning</p>
+                  </div>
+                </Link>
+
+                <Link href="/about" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <Award size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>University Partners</p>
+                    <p className={styles.linkSub}>5 authorized partner institutions</p>
+                  </div>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* 3. Courses ▾ (Two-Column Mega Dropdown) */}
+          <div
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => setActiveDropdown("courses")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <Link
+              href="/courses"
+              className={`${styles.navItem} ${
+                pathname.startsWith("/courses") ? styles.activeItem : ""
+              }`}
+            >
+              <span>Courses</span>
+              <ChevronDown
+                size={14}
+                className={`${styles.chevron} ${
+                  activeDropdown === "courses" ? styles.rotateChevron : ""
+                }`}
+              />
+            </Link>
+
+            {activeDropdown === "courses" && (
+              <div className={`${styles.dropdownMenu} ${styles.coursesMegaMenu}`}>
+                {/* Left Column: Overview */}
+                <div className={styles.megaLeftCol}>
+                  <p className={styles.megaEyebrow}>ACADEMIC DISCIPLINES</p>
+                  <h4 className={styles.megaHeading}>Explore Programs</h4>
+                  <p className={styles.megaDesc}>
+                    Industry-aligned software engineering, AI, DevOps, and accredited university degree tracks in Raipur.
+                  </p>
+                  <Link href="/courses" className={styles.megaAllLink}>
+                    <span>View All 13 Programs</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+
+                {/* Right Column: Verified Program List */}
+                <div className={styles.megaRightCol}>
+                  <Link href="/courses/full-stack-web-development" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Full Stack Web Development</p>
+                      <p className={styles.cSub}>React, Next.js, Node.js, Databases</p>
+                    </div>
                   </Link>
 
-                  {/* Clean Mega Dropdown Menu */}
-                  {coursesDropdownOpen && (
-                    <div className={styles.megaMenu}>
-                      <div className={styles.megaMenuTop}>
-                        <p className={styles.megaMenuHeading}>ACADEMIC DISCIPLINES & TRACKS</p>
-                        <Link href="/courses" className={styles.viewAllLink}>
-                          View Full Catalog <ArrowRight size={13} />
-                        </Link>
-                      </div>
-
-                      <div className={styles.megaMenuGrid}>
-                        {coursesData.slice(0, 6).map((c) => (
-                          <Link
-                            key={c.slug}
-                            href={`/courses/${c.slug}`}
-                            className={styles.megaMenuItem}
-                          >
-                            <span className={styles.menuDot} />
-                            <div>
-                              <p className={styles.megaItemTitle}>{c.name}</p>
-                              <p className={styles.megaItemSub}>{c.category}</p>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-
-                      <div className={styles.megaMenuFooter}>
-                        <span className={styles.authTag}>
-                          🎓 Authorised University Partner (MBA / BBA / B.Com)
-                        </span>
-                        <Link href="/courses/university-degree-programs" className={styles.degreeBtn}>
-                          Explore Degrees →
-                        </Link>
-                      </div>
+                  <Link href="/courses/data-science-ai" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Data Science & AI</p>
+                      <p className={styles.cSub}>Python, ML, Neural Networks, NLP</p>
                     </div>
-                  )}
+                  </Link>
+
+                  <Link href="/courses/data-analytics" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Data Analytics / BI</p>
+                      <p className={styles.cSub}>Power BI, SQL, Tableau, Statistics</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/courses/cyber-security-ethical-hacking" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Cyber Security & Hacking</p>
+                      <p className={styles.cSub}>Network Defense, Kali Linux, Pentesting</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/courses/devops-cloud-engineering" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>DevOps & Cloud</p>
+                      <p className={styles.cSub}>Docker, Kubernetes, CI/CD, AWS</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/courses/mobile-app-development" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Mobile App Development</p>
+                      <p className={styles.cSub}>Flutter, iOS Swift, Android Kotlin</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/courses/financial-tally-sap" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>Tally Prime & SAP ERP</p>
+                      <p className={styles.cSub}>GST Filing, Accounting, SAP FICO</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/courses/university-degree-programs" className={styles.courseItem}>
+                    <span className={styles.dot} />
+                    <div>
+                      <p className={styles.cTitle}>University Degree Programs</p>
+                      <p className={styles.cSub}>MBA, BBA, B.Com UGC Recognized</p>
+                    </div>
+                  </Link>
                 </div>
-              );
-            }
+              </div>
+            )}
+          </div>
 
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`${styles.navLink} ${
-                  pathname === link.href ? styles.activeLink : ""
+          {/* 4. Career ▾ */}
+          <div
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => setActiveDropdown("career")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <div
+              className={`${styles.navItem} ${
+                pathname === "/internship" || pathname === "/courses/communication-soft-skills"
+                  ? styles.activeItem
+                  : ""
+              }`}
+            >
+              <span>Career</span>
+              <ChevronDown
+                size={14}
+                className={`${styles.chevron} ${
+                  activeDropdown === "career" ? styles.rotateChevron : ""
                 }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </div>
+              />
+            </div>
 
-        {/* Right Action Buttons (Get full access / Join us style) */}
+            {activeDropdown === "career" && (
+              <div className={`${styles.dropdownMenu} ${styles.careerDropdown}`}>
+                <Link href="/courses/communication-soft-skills" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <Briefcase size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>Career Preparation</p>
+                    <p className={styles.linkSub}>Resume writing, GDs & mock HR rounds</p>
+                  </div>
+                </Link>
+
+                <Link href="/internship" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <GraduationCap size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>Internship & Training</p>
+                    <p className={styles.linkSub}>Live software projects & certifications</p>
+                  </div>
+                </Link>
+
+                <Link href="/internship" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <HeartHandshake size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>CSR / Scholarships</p>
+                    <p className={styles.linkSub}>Akida Welfare Foundation 50% subsidy</p>
+                  </div>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* 5. Services */}
+          <Link
+            href="/services"
+            className={`${styles.navItem} ${pathname === "/services" ? styles.activeItem : ""}`}
+          >
+            Services
+          </Link>
+
+          {/* 6. Contact */}
+          <Link
+            href="/contact"
+            className={`${styles.navItem} ${pathname === "/contact" ? styles.activeItem : ""}`}
+          >
+            Contact
+          </Link>
+        </nav>
+
+        {/* Right Side Actions */}
         <div className={styles.navActions}>
           <Link href="/contact" className={styles.primaryCta}>
             Enquire Now
@@ -155,10 +330,11 @@ export const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             className={styles.secondaryCta}
           >
-            WhatsApp
+            <MessageCircle size={15} />
+            <span>WhatsApp</span>
           </a>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Hamburger Toggle */}
           <button
             type="button"
             className={styles.mobileToggle}
@@ -166,40 +342,147 @@ export const Navbar: React.FC = () => {
             aria-label="Toggle Menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-      </nav>
+      </div>
 
-      {/* Mobile Dropdown Drawer */}
+      {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className={styles.mobileDrawer}>
-          <div className={styles.mobileLinks}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`${styles.mobileNavLink} ${
-                  pathname === link.href ? styles.activeMobileLink : ""
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          <div className={styles.mobileDivider} />
-
-          <div className={styles.mobileActions}>
-            <Link href="/contact" className={styles.mobilePrimaryBtn}>
-              Enquire Now
+        <div className={styles.mobileMenuDrawer}>
+          <div className={styles.mobileScroll}>
+            {/* Home */}
+            <Link href="/" className={styles.mobileNavLink}>
+              Home
             </Link>
-            <a
-              href={`tel:${siteConfig.contact.primaryPhone}`}
-              className={styles.mobileSecondaryBtn}
-            >
-              Call {siteConfig.contact.primaryPhoneDisplay}
-            </a>
+
+            {/* About Accordion */}
+            <div className={styles.mobileAccordion}>
+              <button
+                type="button"
+                className={styles.mobileAccordionBtn}
+                onClick={() => toggleMobileSubmenu("about")}
+              >
+                <span>About</span>
+                <ChevronDown
+                  size={16}
+                  className={`${styles.mChevron} ${
+                    mobileExpanded.about ? styles.mRotate : ""
+                  }`}
+                />
+              </button>
+              {mobileExpanded.about && (
+                <div className={styles.mobileSubLinks}>
+                  <Link href="/about" className={styles.subLink}>About Midas</Link>
+                  <Link href="/about" className={styles.subLink}>Our Approach</Link>
+                  <Link href="/about" className={styles.subLink}>University Partners</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Courses Accordion */}
+            <div className={styles.mobileAccordion}>
+              <button
+                type="button"
+                className={styles.mobileAccordionBtn}
+                onClick={() => toggleMobileSubmenu("courses")}
+              >
+                <span>Courses</span>
+                <ChevronDown
+                  size={16}
+                  className={`${styles.mChevron} ${
+                    mobileExpanded.courses ? styles.mRotate : ""
+                  }`}
+                />
+              </button>
+              {mobileExpanded.courses && (
+                <div className={styles.mobileSubLinks}>
+                  <Link href="/courses/full-stack-web-development" className={styles.subLink}>
+                    Full Stack Web Development
+                  </Link>
+                  <Link href="/courses/data-science-ai" className={styles.subLink}>
+                    Data Science & AI
+                  </Link>
+                  <Link href="/courses/data-analytics" className={styles.subLink}>
+                    Data Analytics / BI
+                  </Link>
+                  <Link href="/courses/cyber-security-ethical-hacking" className={styles.subLink}>
+                    Cyber Security & Hacking
+                  </Link>
+                  <Link href="/courses/devops-cloud-engineering" className={styles.subLink}>
+                    DevOps & Cloud
+                  </Link>
+                  <Link href="/courses/mobile-app-development" className={styles.subLink}>
+                    Mobile App Development
+                  </Link>
+                  <Link href="/courses/financial-tally-sap" className={styles.subLink}>
+                    Tally Prime & SAP ERP
+                  </Link>
+                  <Link href="/courses/university-degree-programs" className={styles.subLink}>
+                    University Degree Programs
+                  </Link>
+                  <Link href="/courses" className={styles.subLinkHighlight}>
+                    View Full Catalog →
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Career Accordion */}
+            <div className={styles.mobileAccordion}>
+              <button
+                type="button"
+                className={styles.mobileAccordionBtn}
+                onClick={() => toggleMobileSubmenu("career")}
+              >
+                <span>Career</span>
+                <ChevronDown
+                  size={16}
+                  className={`${styles.mChevron} ${
+                    mobileExpanded.career ? styles.mRotate : ""
+                  }`}
+                />
+              </button>
+              {mobileExpanded.career && (
+                <div className={styles.mobileSubLinks}>
+                  <Link href="/courses/communication-soft-skills" className={styles.subLink}>
+                    Career Preparation (HR Mock Rounds)
+                  </Link>
+                  <Link href="/internship" className={styles.subLink}>
+                    Summer & Industrial Internship
+                  </Link>
+                  <Link href="/internship" className={styles.subLink}>
+                    Akida Welfare CSR Scholarships
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Services */}
+            <Link href="/services" className={styles.mobileNavLink}>
+              Services
+            </Link>
+
+            {/* Contact */}
+            <Link href="/contact" className={styles.mobileNavLink}>
+              Contact
+            </Link>
+
+            {/* Actions */}
+            <div className={styles.mobileActionBox}>
+              <Link href="/contact" className={styles.mobilePrimaryBtn}>
+                Enquire Now
+              </Link>
+              <a
+                href={siteConfig.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mobileSecondaryBtn}
+              >
+                <MessageCircle size={16} />
+                <span>WhatsApp Admissions</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
