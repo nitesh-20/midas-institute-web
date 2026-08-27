@@ -6,57 +6,6 @@ import { ArrowRight, CheckCircle2, MapPin, Award, GraduationCap } from "lucide-r
 import { siteConfig } from "@/data/siteConfig";
 import styles from "./AcademicPartners.module.css";
 
-// Authentic vector university emblem seals
-const universityLogos: Record<string, React.ReactNode> = {
-  KU: (
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.uniSvg}>
-      <circle cx="30" cy="30" r="28" fill="#1e3a8a" stroke="#d97706" strokeWidth="2" />
-      <circle cx="30" cy="30" r="22" stroke="#ffffff" strokeWidth="1" strokeDasharray="3 2" />
-      <path d="M30 14L38 22H22L30 14Z" fill="#fbbf24" />
-      <path d="M22 24H38V38C38 42 30 46 30 46C30 46 22 42 22 38V24Z" fill="#ffffff" />
-      <path d="M26 28L30 32L34 28V36L30 39L26 36V28Z" fill="#1e3a8a" />
-      <text x="30" y="52" textAnchor="middle" fill="#fbbf24" fontSize="5" fontWeight="900" fontFamily="sans-serif">KALINGA</text>
-    </svg>
-  ),
-  ISBM: (
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.uniSvg}>
-      <circle cx="30" cy="30" r="28" fill="#991b1b" stroke="#f59e0b" strokeWidth="2" />
-      <circle cx="30" cy="30" r="23" stroke="#fef3c7" strokeWidth="1" />
-      <circle cx="30" cy="24" r="5" fill="#fef3c7" />
-      <path d="M18 36C22 32 28 34 30 36C32 34 38 32 42 36V42C38 38 32 40 30 42C28 40 22 38 18 42V36Z" fill="#fef3c7" />
-      <path d="M30 18V26M26 20L34 28M34 20L26 28" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round" />
-      <text x="30" y="51" textAnchor="middle" fill="#ffffff" fontSize="5.5" fontWeight="900" fontFamily="sans-serif">ISBM UNIV</text>
-    </svg>
-  ),
-  MATS: (
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.uniSvg}>
-      <circle cx="30" cy="30" r="28" fill="#065f46" stroke="#fbbf24" strokeWidth="2" />
-      <path d="M30 15L43 23V37C43 43 30 47 30 47C30 47 17 43 17 37V23L30 15Z" fill="#ffffff" stroke="#065f46" strokeWidth="1.5" />
-      <circle cx="30" cy="30" r="8" fill="#065f46" />
-      <path d="M30 25V35M25 30H35" stroke="#fbbf24" strokeWidth="2" />
-      <text x="30" y="53" textAnchor="middle" fill="#fbbf24" fontSize="5" fontWeight="900" fontFamily="sans-serif">MATS UNIV</text>
-    </svg>
-  ),
-  AU: (
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.uniSvg}>
-      <circle cx="30" cy="30" r="28" fill="#831843" stroke="#f43f5e" strokeWidth="2" />
-      <circle cx="30" cy="30" r="22" stroke="#ffffff" strokeWidth="1" strokeDasharray="4 2" />
-      <path d="M30 16L40 38H34L30 29L26 38H20L30 16Z" fill="#fbcfe8" />
-      <path d="M25 33H35" stroke="#831843" strokeWidth="2" />
-      <text x="30" y="51" textAnchor="middle" fill="#ffffff" fontSize="4.5" fontWeight="900" fontFamily="sans-serif">ANJANEYA</text>
-    </svg>
-  ),
-  CVRU: (
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.uniSvg}>
-      <circle cx="30" cy="30" r="28" fill="#312e81" stroke="#38bdf8" strokeWidth="2" />
-      <ellipse cx="30" cy="30" rx="16" ry="6" stroke="#38bdf8" strokeWidth="1.5" transform="rotate(30 30 30)" />
-      <ellipse cx="30" cy="30" rx="16" ry="6" stroke="#38bdf8" strokeWidth="1.5" transform="rotate(-30 30 30)" />
-      <circle cx="30" cy="30" r="4" fill="#fbbf24" />
-      <text x="30" y="51" textAnchor="middle" fill="#ffffff" fontSize="4.5" fontWeight="900" fontFamily="sans-serif">DR. C.V. RAMAN</text>
-    </svg>
-  )
-};
-
 export const AcademicPartners: React.FC = () => {
   const [selectedPartnerIndex, setSelectedPartnerIndex] = useState(0);
   const partners = siteConfig.partners;
@@ -97,7 +46,11 @@ export const AcademicPartners: React.FC = () => {
             <div className={styles.activeDetailCard} key={activePartner.code}>
               <div className={styles.detailTop}>
                 <div className={styles.activeLogoBox}>
-                  {universityLogos[activePartner.code] || universityLogos.KU}
+                  <img
+                    src={activePartner.logoUrl}
+                    alt={`${activePartner.name} Official Logo`}
+                    className={styles.activeLogoImg}
+                  />
                 </div>
                 <div className={styles.detailTitleWrap}>
                   <span className={styles.authBadge}>AUTHORISED TRAINING PARTNER</span>
@@ -150,7 +103,11 @@ export const AcademicPartners: React.FC = () => {
                   >
                     <div className={styles.rowLeft}>
                       <div className={styles.rowLogoBox}>
-                        {universityLogos[partner.code] || universityLogos.KU}
+                        <img
+                          src={partner.logoUrl}
+                          alt={`${partner.name} Logo`}
+                          className={styles.rowLogoImg}
+                        />
                       </div>
                       <div className={styles.rowText}>
                         <h4 className={styles.rowName}>{partner.name}</h4>

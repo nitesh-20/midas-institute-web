@@ -1,6 +1,7 @@
 export interface PartnerUniversity {
   name: string;
   code: string;
+  logoUrl: string;
   badgeText: string;
   description: string;
   location: string;
@@ -93,6 +94,7 @@ export const siteConfig: SiteConfig = {
     {
       name: "Kalinga University",
       code: "KU",
+      logoUrl: "/images/partners/kalinga.svg",
       badgeText: "Authorised Training Partner",
       description: "Recognized higher education programs, technical diplomas and degree courses.",
       location: "Raipur, Chhattisgarh"
@@ -100,6 +102,7 @@ export const siteConfig: SiteConfig = {
     {
       name: "ISBM University",
       code: "ISBM",
+      logoUrl: "/images/partners/isbm.png",
       badgeText: "Authorised Training Partner",
       description: "Professional degree and vocational certifications in business and computer science.",
       location: "Chhattisgarh"
@@ -107,6 +110,7 @@ export const siteConfig: SiteConfig = {
     {
       name: "MATS University",
       code: "MATS",
+      logoUrl: "/images/partners/mats.png",
       badgeText: "Authorised Training Partner",
       description: "Undergraduate and postgraduate degrees in technology and management.",
       location: "Raipur, Chhattisgarh"
@@ -114,6 +118,7 @@ export const siteConfig: SiteConfig = {
     {
       name: "Anjaneya University",
       code: "AU",
+      logoUrl: "/images/partners/anjaneya.png",
       badgeText: "Authorised Training Partner",
       description: "Industry-aligned diploma and degree programs with accredited curriculum.",
       location: "Raipur, Chhattisgarh"
@@ -121,6 +126,7 @@ export const siteConfig: SiteConfig = {
     {
       name: "Dr. C.V. Raman University",
       code: "CVRU",
+      logoUrl: "/images/partners/cvru.png",
       badgeText: "Authorised Training Partner",
       description: "Premier state university offering recognized tech and management certifications.",
       location: "Chhattisgarh"
