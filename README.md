@@ -3,9 +3,12 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Live_Production-black?style=flat&logo=vercel)](https://midas-institute-web.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
 A production-grade, high-performance web platform built for **MIDAS INSTITUTE OF SOFTWARE TECHNOLOGY (Raipur, Chhattisgarh)**. Designed with a custom **Red + White + Dark Charcoal** academic design system, editorial layouts, interactive syllabus explorers, and zero bloated CSS dependencies.
+
+🌐 **Live URL:** [https://midas-institute-web.vercel.app](https://midas-institute-web.vercel.app)
 
 ---
 
