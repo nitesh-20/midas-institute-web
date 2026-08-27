@@ -134,6 +134,16 @@ export const Navbar: React.FC = () => {
                     <p className={styles.linkSub}>5 authorized partner institutions</p>
                   </div>
                 </Link>
+
+                <Link href="/#gallery" className={styles.dropdownLink}>
+                  <div className={styles.linkIconBox}>
+                    <Sparkles size={16} />
+                  </div>
+                  <div>
+                    <p className={styles.linkTitle}>Inside Midas (Gallery)</p>
+                    <p className={styles.linkSub}>Developer labs, workshops & student life</p>
+                  </div>
+                </Link>
               </div>
             )}
           </div>

@@ -6,6 +6,7 @@ import { EditorialCourseExplorer } from "@/components/home/EditorialCourseExplor
 import { FeaturedProgram } from "@/components/home/FeaturedProgram";
 import { CareerRoadmap } from "@/components/home/CareerRoadmap";
 import { AcademicPartners } from "@/components/home/AcademicPartners";
+import { GallerySection } from "@/components/home/GallerySection";
 import { EditorialServices } from "@/components/home/EditorialServices";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -33,10 +34,13 @@ export default function HomePage() {
       {/* 7. Academic Partnerships & University Accreditations */}
       <AcademicPartners />
 
-      {/* 8. Institutional Services (Large Numbered Interactive Rows) */}
+      {/* 8. Inside Midas — Editorial Photo Gallery & Interactive Lightbox */}
+      <GallerySection />
+
+      {/* 9. Institutional Services (Large Numbered Interactive Rows) */}
       <EditorialServices />
 
-      {/* 9. High-Contrast Admissions & Counseling Conversion Banner */}
+      {/* 10. High-Contrast Admissions & Counseling Conversion Banner */}
       <CtaBanner />
     </>
   );
